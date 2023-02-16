@@ -25,7 +25,7 @@ trait FileApiDtoTrait
     use ActiveTrait;
     use AttachmentTrait;
     use DescriptionTrait;
-    use MaterialApiDtoTrait;
     use IdTrait;
+    use MaterialApiDtoTrait;
     use PositionTrait;
 }

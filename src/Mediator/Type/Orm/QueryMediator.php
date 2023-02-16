@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Mediator\Type\Orm;
 
+use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface;
 use Evrinoma\MaterialBundle\Mediator\Type\QueryMediatorInterface;
 use Evrinoma\MaterialBundle\Repository\AliasInterface;
-use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\UtilsBundle\Mediator\AbstractQueryMediator;
 use Evrinoma\UtilsBundle\Mediator\Orm\QueryMediatorTrait;
 use Evrinoma\UtilsBundle\QueryBuilder\QueryBuilderInterface;

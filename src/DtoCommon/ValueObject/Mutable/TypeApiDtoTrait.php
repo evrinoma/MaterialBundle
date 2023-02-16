@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable;
 
+use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface;
 use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Immutable\TypeApiDtoTrait as TypeApiDtoImmutableTrait;
-use Evrinoma\DtoBundle\Dto\DtoInterface;
 
 trait TypeApiDtoTrait
 {

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable;
 
-use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface as BaseTypeApiDtoInterface;
 use Evrinoma\DtoBundle\Dto\DtoInterface;
+use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface as BaseTypeApiDtoInterface;
 
 interface TypeApiDtoInterface
 {

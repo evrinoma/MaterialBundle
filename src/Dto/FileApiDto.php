@@ -28,10 +28,10 @@ use Symfony\Component\HttpFoundation\Request;
 class FileApiDto extends AbstractDto implements FileApiDtoInterface
 {
     use ActiveTrait;
-    use DescriptionTrait;
-    use MaterialApiDtoTrait;
-    use IdTrait;
     use AttachmentTrait;
+    use DescriptionTrait;
+    use IdTrait;
+    use MaterialApiDtoTrait;
     use PositionTrait;
 
     /**

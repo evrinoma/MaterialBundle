@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Mediator\Type;
 
+use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface;
 use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
-use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\UtilsBundle\Mediator\AbstractCommandMediator;
 
 class CommandMediator extends AbstractCommandMediator implements CommandMediatorInterface

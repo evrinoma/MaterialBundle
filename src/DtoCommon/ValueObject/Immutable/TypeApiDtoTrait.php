@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\DtoCommon\ValueObject\Immutable;
 
+use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\TypeApiDto;
 use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface;
-use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 trait TypeApiDtoTrait

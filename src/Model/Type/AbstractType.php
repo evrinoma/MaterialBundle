@@ -27,6 +27,6 @@ abstract class AbstractType implements TypeInterface
 {
     use ActiveTrait;
     use BriefTrait;
-    use IdTrait;
     use DescriptionTrait;
+    use IdTrait;
 }

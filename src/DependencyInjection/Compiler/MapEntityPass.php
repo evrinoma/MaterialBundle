@@ -15,12 +15,12 @@ namespace Evrinoma\MaterialBundle\DependencyInjection\Compiler;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\ORM\Mapping;
-use Evrinoma\MaterialBundle\Entity\Type\BaseType;
-use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
 use Evrinoma\MaterialBundle\DependencyInjection\EvrinomaMaterialExtension;
 use Evrinoma\MaterialBundle\Entity\File\BaseFile;
+use Evrinoma\MaterialBundle\Entity\Type\BaseType;
 use Evrinoma\MaterialBundle\Model\File\FileInterface;
 use Evrinoma\MaterialBundle\Model\Material\MaterialInterface;
+use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
 use Evrinoma\UtilsBundle\DependencyInjection\Compiler\AbstractMapEntity;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

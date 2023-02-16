@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle;
 
-use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Complex\MaterialPass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\FilePass as PropertyFilePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\MaterialPass as PropertyMaterialPass;
+use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\DecoratorPass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\MapEntityPass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\ServicePass;

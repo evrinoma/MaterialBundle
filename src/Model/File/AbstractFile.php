@@ -28,11 +28,11 @@ use Evrinoma\UtilsBundle\Entity\PositionTrait;
 abstract class AbstractFile implements FileInterface
 {
     use ActiveTrait;
+    use AttachmentTrait;
     use CreateUpdateAtTrait;
     use DescriptionTrait;
     use IdTrait;
     use PositionTrait;
-    use AttachmentTrait;
 
     /**
      * @ORM\ManyToOne(targetEntity="Evrinoma\MaterialBundle\Model\Material\MaterialInterface")

@@ -13,20 +13,20 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\DependencyInjection;
 
-use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
-use Evrinoma\MaterialBundle\Dto\TypeApiDto;
-use Evrinoma\MaterialBundle\Entity\Type\BaseType;
-use Evrinoma\MaterialBundle\Mediator\Type\QueryMediatorInterface as TypeQueryMediatorInterface;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\FilePass as PropertyFilePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\MaterialPass as PropertyMaterialPass;
+use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
 use Evrinoma\MaterialBundle\Dto\FileApiDto;
 use Evrinoma\MaterialBundle\Dto\MaterialApiDto;
+use Evrinoma\MaterialBundle\Dto\TypeApiDto;
 use Evrinoma\MaterialBundle\Entity\File\BaseFile;
 use Evrinoma\MaterialBundle\Entity\Material\BaseMaterial;
+use Evrinoma\MaterialBundle\Entity\Type\BaseType;
 use Evrinoma\MaterialBundle\EvrinomaMaterialBundle;
 use Evrinoma\MaterialBundle\Factory\Material\Factory as MaterialFactory;
 use Evrinoma\MaterialBundle\Mediator\File\QueryMediatorInterface as FileQueryMediatorInterface;
 use Evrinoma\MaterialBundle\Mediator\Material\QueryMediatorInterface as MaterialQueryMediatorInterface;
+use Evrinoma\MaterialBundle\Mediator\Type\QueryMediatorInterface as TypeQueryMediatorInterface;
 use Evrinoma\UtilsBundle\Adaptor\AdaptorRegistry;
 use Evrinoma\UtilsBundle\DependencyInjection\HelperTrait;
 use Evrinoma\UtilsBundle\Handler\BaseHandler;

@@ -14,13 +14,13 @@ declare(strict_types=1);
 namespace Evrinoma\MaterialBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
+use Evrinoma\DtoBundle\Factory\FactoryDtoInterface;
 use Evrinoma\MaterialBundle\Dto\TypeApiDtoInterface;
 use Evrinoma\MaterialBundle\Exception\Type\TypeCannotBeSavedException;
 use Evrinoma\MaterialBundle\Exception\Type\TypeInvalidException;
 use Evrinoma\MaterialBundle\Exception\Type\TypeNotFoundException;
 use Evrinoma\MaterialBundle\Facade\Type\FacadeInterface;
 use Evrinoma\MaterialBundle\Serializer\GroupInterface;
-use Evrinoma\DtoBundle\Factory\FactoryDtoInterface;
 use Evrinoma\UtilsBundle\Controller\AbstractWrappedApiController;
 use Evrinoma\UtilsBundle\Controller\ApiControllerInterface;
 use FOS\RestBundle\Controller\Annotations as Rest;
