@@ -1,0 +1,100 @@
+services:
+  Evrinoma\MaterialBundle\Controller\FileApiController:
+    alias: evrinoma.material.file.api.controller
+    public: true
+
+  evrinoma.material.file.api.controller:
+    class: Evrinoma\MaterialBundle\Controller\FileApiController
+    arguments:
+      - '@jms_serializer'
+      - '@request_stack'
+      - '@evrinoma.dto.factory'
+      - '@evrinoma.material.file.facade'
+    autowire: true
+
+  evrinoma.material.file.facade:
+    class: Evrinoma\MaterialBundle\Facade\File\Facade
+    arguments:
+      - '@evrinoma.material.file.command.manager'
+      - '@evrinoma.material.file.query.manager'
+      - '@evrinoma.material.adaptor'
+    autowire: true
+
+  Evrinoma\MaterialBundle\Facade\File\FacadeInterface:
+    alias: evrinoma.material.file.facade
+
+  evrinoma.material.file.factory:
+    class: Evrinoma\MaterialBundle\Factory\File\Factory
+    public: true
+    arguments:
+
+  evrinoma.material.file.orm.repository:
+    class: Evrinoma\MaterialBundle\Repository\Orm\File\FileRepository
+    public: true
+    arguments:
+
+  evrinoma.material.file.command.manager:
+    class: Evrinoma\MaterialBundle\Manager\File\CommandManager
+    arguments:
+      - '@evrinoma.material.file.validator'
+      - '@evrinoma.material.file.repository'
+      - '@evrinoma.material.file.factory'
+      - '@evrinoma.material.file.command.mediator'
+      - '@evrinoma.material.material.query.manager'
+
+  Evrinoma\MaterialBundle\Manager\File\CommandManagerInterface:
+    alias: evrinoma.material.file.command.manager
+
+  evrinoma.material.file.query.manager:
+    class: Evrinoma\MaterialBundle\Manager\File\QueryManager
+    arguments:
+      - '@evrinoma.material.file.repository'
+
+  Evrinoma\MaterialBundle\Manager\File\QueryManagerInterface:
+    alias: evrinoma.material.file.query.manager
+
+  evrinoma.material.file.validator:
+    class: Evrinoma\MaterialBundle\Validator\FileValidator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\Validator\FileValidator:
+    alias: evrinoma.material.file.validator
+
+  evrinoma.material.file.query.orm.mediator:
+    class: Evrinoma\MaterialBundle\Mediator\File\Orm\QueryMediator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\Mediator\File\Orm\QueryMediator:
+    alias: evrinoma.material.file.query.orm.mediator
+
+  evrinoma.material.file.command.mediator:
+    class: Evrinoma\MaterialBundle\Mediator\File\CommandMediator
+    public: true
+    arguments:
+      - '@evrinoma.material.material.system.file_system'
+      - '@evrinoma.material.material.query.manager'
+
+  Evrinoma\MaterialBundle\Mediator\File\CommandMediator:
+    alias: evrinoma.material.file.command.mediator
+
+  Evrinoma\MaterialBundle\Mediator\File\CommandMediatorInterface:
+    alias: evrinoma.material.file.command.mediator
+
+  evrinoma.material.file.pre.validator:
+    class: Evrinoma\MaterialBundle\PreValidator\File\DtoPreValidator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\PreValidator\File\DtoPreValidator:
+    alias: evrinoma.material.file.pre.validator
+
+  Evrinoma\MaterialBundle\PreValidator\File\DtoPreValidatorInterface:
+    alias: evrinoma.material.file.pre.validator
+
+  evrinoma.material.file.form.rest.file:
+    class: Evrinoma\MaterialBundle\Form\Rest\File\FileChoiceType
+    arguments:
+      - '@evrinoma.material.file.query.manager'
+    tags: { - name: form.type }

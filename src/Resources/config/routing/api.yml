@@ -1,0 +1,9 @@
+material_api:
+  resource: "@EvrinomaMaterialBundle/Controller/MaterialApiController.php"
+  type: annotation
+
+material_file_api:
+  resource: "@EvrinomaMaterialBundle/Controller/FileApiController.php"
+  type: annotation
+
+

@@ -1,0 +1,10 @@
+services:
+  evrinoma.material.fixtures.material:
+    class: Evrinoma\MaterialBundle\Fixtures\MaterialFixtures
+    tags:
+      - { name: doctrine.fixture.orm }
+
+  evrinoma.material.fixtures.file:
+    class: Evrinoma\MaterialBundle\Fixtures\FileFixtures
+    tags:
+      - { name: doctrine.fixture.orm }

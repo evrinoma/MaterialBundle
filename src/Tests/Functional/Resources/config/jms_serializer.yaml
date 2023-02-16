@@ -1,0 +1,6 @@
+jms_serializer:
+  metadata:
+    directories:
+      MaterialBundle:
+        namespace_prefix: "Evrinoma\\MaterialBundle"
+        path: '%kernel.root_dir%/Resources/config/serializer/MaterialBundle'

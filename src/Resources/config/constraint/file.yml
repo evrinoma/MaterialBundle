@@ -1,0 +1,9 @@
+services:
+  evrinoma.material.constraint.property.file.description:
+    class: Evrinoma\MaterialBundle\Constraint\Property\File\Description
+  evrinoma.material.constraint.property.file.active:
+    class: Evrinoma\MaterialBundle\Constraint\Property\File\Active
+  evrinoma.material.constraint.property.file.attachment:
+    class: Evrinoma\MaterialBundle\Constraint\Property\File\Attachment
+  evrinoma.material.constraint.property.file.position:
+    class: Evrinoma\MaterialBundle\Constraint\Property\File\Position

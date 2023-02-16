@@ -1,0 +1,17 @@
+services:
+  evrinoma.material.constraint.property.material.body:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Body
+
+  evrinoma.material.constraint.property.material.title:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Title
+
+  evrinoma.material.constraint.property.material.preview:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Preview
+
+  evrinoma.material.constraint.property.material.active:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Active
+
+  evrinoma.material.constraint.property.material.position:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Position
+
+
