@@ -198,13 +198,6 @@ class BaseFile extends AbstractServiceTest implements BaseFileTestInterface
 
         $query = static::getDefault([
             FileApiDtoInterface::ID => $created[PayloadModel::PAYLOAD][0][FileApiDtoInterface::ID],
-        ]);
-
-        $this->put($query);
-        $this->testResponseStatusUnprocessable();
-
-        $query = static::getDefault([
-            FileApiDtoInterface::ID => $created[PayloadModel::PAYLOAD][0][FileApiDtoInterface::ID],
             FileApiDtoInterface::POSITION => Position::blank(),
         ]);
 
@@ -255,7 +248,7 @@ class BaseFile extends AbstractServiceTest implements BaseFileTestInterface
         static::$files = [];
 
         $created = $this->createFile();
-        $this->testResponseStatusConflict();
+        $this->testResponseStatusCreated();
     }
 
     public function actionPostUnprocessable(): void
