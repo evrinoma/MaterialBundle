@@ -15,6 +15,8 @@ namespace Evrinoma\MaterialBundle\DependencyInjection\Compiler;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\ORM\Mapping;
+use Evrinoma\MaterialBundle\Entity\Type\BaseType;
+use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
 use Evrinoma\MaterialBundle\DependencyInjection\EvrinomaMaterialExtension;
 use Evrinoma\MaterialBundle\Entity\File\BaseFile;
 use Evrinoma\MaterialBundle\Model\File\FileInterface;
@@ -42,8 +44,15 @@ class MapEntityPass extends AbstractMapEntity implements CompilerPassInterface
             $entityFile = BaseFile::class;
 
             $this->loadMetadata($driver, $referenceAnnotationReader, '%s/Model/File', '%s/Entity/File');
+            $this->loadMetadata($driver, $referenceAnnotationReader, '%s/Model/Type', '%s/Entity/Type');
 
-            $this->addResolveTargetEntity([$entityFile => [FileInterface::class => []]], false);
+            $this->addResolveTargetEntity(
+                [
+                    $entityFile => [FileInterface::class => []],
+                    BaseType::class => [TypeInterface::class => []],
+                ],
+                false
+            );
 
             $entityMaterial = $container->getParameter('evrinoma.material.entity');
             if (str_contains($entityMaterial, EvrinomaMaterialExtension::ENTITY)) {

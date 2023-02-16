@@ -1,0 +1,96 @@
+services:
+  Evrinoma\MaterialBundle\Controller\TypeApiController:
+    alias: evrinoma.material.type.api.controller
+    public: true
+
+  evrinoma.material.type.api.controller:
+    class: Evrinoma\MaterialBundle\Controller\TypeApiController
+    arguments:
+      - '@jms_serializer'
+      - '@request_stack'
+      - '@evrinoma.dto.factory'
+      - '@evrinoma.material.type.facade'
+    autowire: true
+
+  evrinoma.material.type.facade:
+    class: Evrinoma\MaterialBundle\Facade\Type\Facade
+    arguments:
+      - '@evrinoma.material.type.command.manager'
+      - '@evrinoma.material.type.query.manager'
+      - '@evrinoma.material.adaptor'
+    autowire: true
+
+  Evrinoma\MaterialBundle\Facade\Type\FacadeInterface:
+    alias: evrinoma.material.type.facade
+
+  evrinoma.material.type.factory:
+    class: Evrinoma\MaterialBundle\Factory\Type\Factory
+    public: true
+    arguments:
+
+  evrinoma.material.type.orm.repository:
+    class: Evrinoma\MaterialBundle\Repository\Orm\Type\TypeRepository
+    public: true
+    arguments:
+
+  evrinoma.material.type.command.manager:
+    class: Evrinoma\MaterialBundle\Manager\Type\CommandManager
+    arguments:
+      - '@evrinoma.material.type.validator'
+      - '@evrinoma.material.type.repository'
+      - '@evrinoma.material.type.factory'
+      - '@evrinoma.material.type.command.mediator'
+
+  Evrinoma\MaterialBundle\Manager\Type\CommandManagerInterface:
+    alias: evrinoma.material.type.command.manager
+
+  evrinoma.material.type.query.manager:
+    class: Evrinoma\MaterialBundle\Manager\Type\QueryManager
+    arguments:
+      - '@evrinoma.material.type.repository'
+
+  Evrinoma\MaterialBundle\Manager\Type\QueryManagerInterface:
+    alias: evrinoma.material.type.query.manager
+
+  evrinoma.material.type.validator:
+    class: Evrinoma\MaterialBundle\Validator\TypeValidator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\Validator\TypeValidator:
+    alias: evrinoma.material.type.validator
+
+  evrinoma.material.type.query.orm.mediator:
+    class: Evrinoma\MaterialBundle\Mediator\Type\Orm\QueryMediator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\Mediator\Type\Orm\QueryMediator:
+    alias: evrinoma.material.type.query.orm.mediator
+
+  evrinoma.material.type.command.mediator:
+    class: Evrinoma\MaterialBundle\Mediator\Type\CommandMediator
+    public: true
+
+  Evrinoma\MaterialBundle\Mediator\Type\CommandMediator:
+    alias: evrinoma.material.type.command.mediator
+
+  Evrinoma\MaterialBundle\Mediator\Type\CommandMediatorInterface:
+    alias: evrinoma.material.type.command.mediator
+
+  evrinoma.material.type.pre.validator:
+    class: Evrinoma\MaterialBundle\PreValidator\Type\DtoPreValidator
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\PreValidator\Type\DtoPreValidator:
+    alias: evrinoma.material.type.pre.validator
+
+  Evrinoma\MaterialBundle\PreValidator\Type\DtoPreValidatorInterface:
+    alias: evrinoma.material.type.pre.validator
+
+  evrinoma.material.type.form.rest.type:
+    class: Evrinoma\MaterialBundle\Form\Rest\Type\TypeChoiceType
+    arguments:
+      - '@evrinoma.material.type.query.manager'
+    tags: { - name: form.type }

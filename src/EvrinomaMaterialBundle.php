@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle;
 
+use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Complex\MaterialPass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\FilePass as PropertyFilePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\MaterialPass as PropertyMaterialPass;
@@ -34,6 +35,7 @@ class EvrinomaMaterialBundle extends Bundle
             ->addCompilerPass(new MapEntityPass($this->getNamespace(), $this->getPath()))
             ->addCompilerPass(new PropertyMaterialPass())
             ->addCompilerPass(new PropertyFilePass())
+            ->addCompilerPass(new PropertyTypePass())
             ->addCompilerPass(new MaterialPass())
             ->addCompilerPass(new DecoratorPass())
             ->addCompilerPass(new ServicePass())

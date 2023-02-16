@@ -11,11 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Evrinoma\MaterialBundle\Fixtures;
+namespace Evrinoma\MaterialBundle\Facade\Type;
 
-interface FixtureInterface
+use Evrinoma\UtilsBundle\Facade\FacadeInterface as BaseFacadeInterface;
+
+interface FacadeInterface extends BaseFacadeInterface
 {
-    public const MATERIAL_FIXTURES = 'MATERIAL_FIXTURES';
-    public const FILE_FIXTURES = 'FILE_FIXTURES';
-    public const TYPE_FIXTURES = 'TYPE_FIXTURES';
 }

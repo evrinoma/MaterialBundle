@@ -1,0 +1,7 @@
+services:
+  evrinoma.material.constraint.property.type.description:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Type\Description
+  evrinoma.material.constraint.property.type.brief:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Type\Brief
+  evrinoma.material.constraint.property.type.active:
+    class: Evrinoma\MaterialBundle\Constraint\Property\Type\Active

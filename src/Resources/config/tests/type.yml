@@ -1,0 +1,9 @@
+services:
+  evrinoma.material.test.functional.action.type:
+    class: Evrinoma\MaterialBundle\Tests\Functional\Action\BaseType
+    public: true
+    arguments:
+
+  Evrinoma\MaterialBundle\Tests\Functional\Action\BaseType:
+    alias: evrinoma.material.test.functional.action.type
+    public: true

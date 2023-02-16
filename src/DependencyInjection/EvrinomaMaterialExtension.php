@@ -13,6 +13,10 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\DependencyInjection;
 
+use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\TypePass as PropertyTypePass;
+use Evrinoma\MaterialBundle\Dto\TypeApiDto;
+use Evrinoma\MaterialBundle\Entity\Type\BaseType;
+use Evrinoma\MaterialBundle\Mediator\Type\QueryMediatorInterface as TypeQueryMediatorInterface;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\FilePass as PropertyFilePass;
 use Evrinoma\MaterialBundle\DependencyInjection\Compiler\Constraint\Property\MaterialPass as PropertyMaterialPass;
 use Evrinoma\MaterialBundle\Dto\FileApiDto;
@@ -99,6 +103,7 @@ class EvrinomaMaterialExtension extends Extension
 
         $this->wireMediator($container, MaterialQueryMediatorInterface::class, $config['db_driver'], 'material');
         $this->wireMediator($container, FileQueryMediatorInterface::class, $config['db_driver'], 'file');
+        $this->wireMediator($container, TypeQueryMediatorInterface::class, $config['db_driver'], 'type');
 
         $this->remapParametersNamespaces(
             $container,
@@ -114,13 +119,16 @@ class EvrinomaMaterialExtension extends Extension
         if ($registry && isset(self::$doctrineDrivers[$config['db_driver']])) {
             $this->wireRepository($container, $registry, MaterialQueryMediatorInterface::class, 'material', $config['entity'], $config['db_driver']);
             $this->wireRepository($container, $registry, FileQueryMediatorInterface::class, 'file', BaseFile::class, $config['db_driver']);
+            $this->wireRepository($container, $registry, TypeQueryMediatorInterface::class, 'type', BaseType::class, $config['db_driver']);
         }
 
         $this->wireController($container, 'material', $config['dto']);
         $this->wireController($container, 'file', FileApiDto::class);
+        $this->wireController($container, 'type', TypeApiDto::class);
 
         $this->wireValidator($container, 'material', $config['entity']);
         $this->wireValidator($container, 'file', BaseFile::class);
+        $this->wireValidator($container, 'type', BaseType::class);
 
         if ($config['constraints']) {
             $loader->load('validation.yml');
@@ -129,6 +137,7 @@ class EvrinomaMaterialExtension extends Extension
         $this->wireConstraintTag($container);
 
         $this->wireForm($container, FileApiDto::class, 'file', 'file');
+        $this->wireForm($container, TypeApiDto::class, 'type', 'type');
 
         if ($config['decorates']) {
             $remap = [];
@@ -187,6 +196,9 @@ class EvrinomaMaterialExtension extends Extension
                     break;
                 case false !== str_contains($key, PropertyFilePass::FILE_CONSTRAINT):
                     $definition->addTag(PropertyFilePass::FILE_CONSTRAINT);
+                    break;
+                case false !== str_contains($key, PropertyTypePass::TYPE_CONSTRAINT):
+                    $definition->addTag(PropertyTypePass::TYPE_CONSTRAINT);
                     break;
 //                case false !== strpos($key, MaterialPass::MATERIAL_CONSTRAINT):
 //                    $definition->addTag(MaterialPass::MATERIAL_CONSTRAINT);

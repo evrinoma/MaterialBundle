@@ -11,11 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Evrinoma\MaterialBundle\Fixtures;
+namespace Evrinoma\MaterialBundle\Entity\Type;
 
-interface FixtureInterface
+use Doctrine\ORM\Mapping as ORM;
+use Evrinoma\MaterialBundle\Model\Type\AbstractType;
+
+/**
+ * @ORM\Table(name="e_material_type")
+ * @ORM\Entity
+ */
+class BaseType extends AbstractType
 {
-    public const MATERIAL_FIXTURES = 'MATERIAL_FIXTURES';
-    public const FILE_FIXTURES = 'FILE_FIXTURES';
-    public const TYPE_FIXTURES = 'TYPE_FIXTURES';
 }

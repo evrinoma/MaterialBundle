@@ -1,0 +1,27 @@
+Evrinoma\MaterialBundle\Model\Type\AbstractType:
+  exclusion_policy: ALL
+  properties:
+    id:
+      groups: [
+          API_GET_MATERIAL, API_POST_MATERIAL, API_PUT_MATERIAL,
+          API_GET_MATERIAL_TYPE, API_POST_MATERIAL_TYPE, API_PUT_MATERIAL_TYPE,
+      ]
+      expose: true
+    brief:
+      groups: [
+          API_GET_MATERIAL, API_POST_MATERIAL, API_PUT_MATERIAL,
+          API_GET_MATERIAL_TYPE, API_POST_MATERIAL_TYPE, API_PUT_MATERIAL_TYPE,
+      ]
+      expose: true
+    description:
+      groups: [
+          API_GET_MATERIAL, API_POST_MATERIAL, API_PUT_MATERIAL,
+          API_GET_MATERIAL_TYPE, API_POST_MATERIAL_TYPE, API_PUT_MATERIAL_TYPE,
+      ]
+      expose: true
+    active:
+      groups: [
+          API_GET_MATERIAL, API_POST_MATERIAL, API_PUT_MATERIAL,
+          API_GET_MATERIAL_TYPE, API_POST_MATERIAL_TYPE, API_PUT_MATERIAL_TYPE,
+      ]
+      expose: true

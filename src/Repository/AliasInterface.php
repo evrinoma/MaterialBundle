@@ -17,4 +17,5 @@ interface AliasInterface
 {
     public const MATERIAL = 'material';
     public const FILE = 'file';
+    public const TYPE = 'type';
 }

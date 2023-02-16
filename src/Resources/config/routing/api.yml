@@ -6,4 +6,7 @@ material_file_api:
   resource: "@EvrinomaMaterialBundle/Controller/FileApiController.php"
   type: annotation
 
+material_type_api:
+  resource: "@EvrinomaMaterialBundle/Controller/TypeApiController.php"
+  type: annotation
 
