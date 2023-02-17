@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Evrinoma\MaterialBundle\Model\File;
 
 use Evrinoma\MaterialBundle\Model\Material\MaterialInterface;
+use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
 use Evrinoma\UtilsBundle\Entity\ActiveInterface;
 use Evrinoma\UtilsBundle\Entity\AttachmentInterface;
 use Evrinoma\UtilsBundle\Entity\CreateUpdateAtInterface;
@@ -29,4 +30,8 @@ interface FileInterface extends ActiveInterface, IdInterface, DescriptionInterfa
     public function getMaterial(): MaterialInterface;
 
     public function setMaterial(MaterialInterface $material): FileInterface;
+
+    public function getType(): TypeInterface;
+
+    public function setType(TypeInterface $type): FileInterface;
 }

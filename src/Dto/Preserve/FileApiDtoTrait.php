@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Dto\Preserve;
 
+use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Preserve\TypeApiDtoTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\ActiveTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\AttachmentTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\DescriptionTrait;
@@ -28,4 +29,5 @@ trait FileApiDtoTrait
     use IdTrait;
     use MaterialApiDtoTrait;
     use PositionTrait;
+    use TypeApiDtoTrait;
 }

@@ -38,3 +38,10 @@ Evrinoma\MaterialBundle\Model\File\AbstractFile:
           API_GET_MATERIAL_FILE, API_POST_MATERIAL_FILE, API_PUT_MATERIAL_FILE,
       ]
       expose: true
+    type:
+      type: Evrinoma\MaterialBundle\Model\Type\AbstractType
+      groups: [
+          API_GET_MATERIAL, API_POST_MATERIAL, API_PUT_MATERIAL,
+          API_GET_MATERIAL_FILE, API_POST_MATERIAL_FILE, API_PUT_MATERIAL_FILE,
+      ]
+      expose: true

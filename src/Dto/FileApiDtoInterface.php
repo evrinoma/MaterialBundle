@@ -20,8 +20,9 @@ use Evrinoma\DtoCommon\ValueObject\Immutable\DescriptionInterface;
 use Evrinoma\DtoCommon\ValueObject\Immutable\IdInterface;
 use Evrinoma\DtoCommon\ValueObject\Immutable\PositionInterface;
 use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Immutable\MaterialApiDtoInterface;
+use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Immutable\TypeApiDtoInterface;
 
-interface FileApiDtoInterface extends DtoInterface, IdInterface, DescriptionInterface, ActiveInterface, AttachmentInterface, PositionInterface, MaterialApiDtoInterface
+interface FileApiDtoInterface extends DtoInterface, IdInterface, DescriptionInterface, ActiveInterface, AttachmentInterface, PositionInterface, MaterialApiDtoInterface, TypeApiDtoInterface
 {
     public const FILE = 'file';
 }

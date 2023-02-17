@@ -70,6 +70,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
      *                         @OA\Property(property="description", type="string"),
      *                         @OA\Property(property="position", type="int"),
      *                         @OA\Property(property="attachment", type="string"),
+     *     @OA\Property(property="type[brief]", type="string"),
      *                         @OA\Property(property="material", type="object",
      *                             @OA\Property(property="class", type="string", default="Evrinoma\MaterialBundle\Dto\MaterialApiDto"),
      *                             @OA\Property(property="id", type="string", default="1"),
@@ -123,6 +124,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
      *                         @OA\Property(property="id", type="string"),
      *                         @OA\Property(property="active", type="string"),
      *                         @OA\Property(property="attachment", type="string"),
+     *      @OA\Property(property="type[brief]", type="string"),
      *                         @OA\Property(property="material", type="object",
      *                             @OA\Property(property="class", type="string", default="Evrinoma\MaterialBundle\Dto\MaterialApiDto"),
      *                             @OA\Property(property="id", type="string", default="1"),
@@ -243,7 +245,20 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
      *         @OA\Schema(
      *             type="string",
      *         )
-     *     )
+     *     ),
+     *     @OA\Parameter(
+     *         name="type[brief]",
+     *         in="query",
+     *         description="Type Article",
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(
+     *                 type="string",
+     *                 ref=@Model(type=Evrinoma\MaterialBundle\Form\Rest\Type\TypeChoiceType::class, options={"data": "brief"})
+     *             ),
+     *         ),
+     *         style="form"
+     *     ),
      * )
      * @OA\Response(response=200, description="Return material file")
      *

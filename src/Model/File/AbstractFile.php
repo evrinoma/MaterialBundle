@@ -15,6 +15,7 @@ namespace Evrinoma\MaterialBundle\Model\File;
 
 use Doctrine\ORM\Mapping as ORM;
 use Evrinoma\MaterialBundle\Model\Material\MaterialInterface;
+use Evrinoma\MaterialBundle\Model\Type\TypeInterface;
 use Evrinoma\UtilsBundle\Entity\ActiveTrait;
 use Evrinoma\UtilsBundle\Entity\AttachmentTrait;
 use Evrinoma\UtilsBundle\Entity\CreateUpdateAtTrait;
@@ -39,6 +40,13 @@ abstract class AbstractFile implements FileInterface
      * @ORM\JoinColumn(name="material_id", referencedColumnName="id")
      */
     protected ?MaterialInterface $material = null;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Evrinoma\MaterialBundle\Model\Type\TypeInterface")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
+     */
+    protected TypeInterface $type;
 
     /**
      * @return MaterialInterface
@@ -73,5 +81,25 @@ abstract class AbstractFile implements FileInterface
     public function hasMaterial(): bool
     {
         return null !== $this->material;
+    }
+
+    /**
+     * @return TypeInterface
+     */
+    public function getType(): TypeInterface
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param TypeInterface $type
+     *
+     *  @return FileInterface
+     */
+    public function setType(TypeInterface $type): FileInterface
+    {
+        $this->type = $type;
+
+        return $this;
     }
 }

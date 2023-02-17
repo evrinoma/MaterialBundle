@@ -22,6 +22,7 @@ use Evrinoma\DtoCommon\ValueObject\Mutable\DescriptionTrait;
 use Evrinoma\DtoCommon\ValueObject\Mutable\IdTrait;
 use Evrinoma\DtoCommon\ValueObject\Mutable\PositionTrait;
 use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable\MaterialApiDtoTrait;
+use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable\TypeApiDtoTrait;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -32,12 +33,18 @@ class FileApiDto extends AbstractDto implements FileApiDtoInterface
     use DescriptionTrait;
     use IdTrait;
     use MaterialApiDtoTrait;
+    use TypeApiDtoTrait;
     use PositionTrait;
 
     /**
      * @Dto(class="Evrinoma\MaterialBundle\Dto\MaterialApiDto", generator="genRequestMaterialApiDto")
      */
     protected ?MaterialApiDtoInterface $materialApiDto = null;
+
+    /**
+     * @Dto(class="Evrinoma\MaterialBundle\Dto\TypeApiDto", generator="genRequestTypeApiDto")
+     */
+    protected ?TypeApiDtoInterface $typeApiDto = null;
 
     public function toDto(Request $request): DtoInterface
     {

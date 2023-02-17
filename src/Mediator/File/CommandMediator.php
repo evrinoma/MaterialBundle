@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Mediator\File;
 
+use Evrinoma\MaterialBundle\Manager\Type\QueryManagerInterface as TypeQueryManagerInterface;
 use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\FileApiDtoInterface;
 use Evrinoma\MaterialBundle\Exception\File\FileCannotBeCreatedException;
@@ -26,11 +27,13 @@ class CommandMediator extends AbstractCommandMediator implements CommandMediator
 {
     private FileSystemInterface $fileSystem;
     private MaterialQueryManagerInterface $materialQueryManager;
+    private TypeQueryManagerInterface $typeQueryManager;
 
-    public function __construct(FileSystemInterface $fileSystem, MaterialQueryManagerInterface $materialQueryManager)
+    public function __construct(FileSystemInterface $fileSystem, MaterialQueryManagerInterface $materialQueryManager, TypeQueryManagerInterface $typeQueryManager)
     {
         $this->fileSystem = $fileSystem;
         $this->materialQueryManager = $materialQueryManager;
+        $this->typeQueryManager = $typeQueryManager;
     }
 
     public function onUpdate(DtoInterface $dto, $entity): FileInterface
@@ -40,6 +43,12 @@ class CommandMediator extends AbstractCommandMediator implements CommandMediator
 
         try {
             $entity->setMaterial($this->materialQueryManager->proxy($dto->getMaterialApiDto()));
+        } catch (\Exception $e) {
+            throw new FileCannotBeSavedException($e->getMessage());
+        }
+
+        try {
+            $entity->setType($this->typeQueryManager->proxy($dto->getTypeApiDto()));
         } catch (\Exception $e) {
             throw new FileCannotBeSavedException($e->getMessage());
         }
@@ -67,6 +76,12 @@ class CommandMediator extends AbstractCommandMediator implements CommandMediator
 
         try {
             $entity->setMaterial($this->materialQueryManager->proxy($dto->getMaterialApiDto()));
+        } catch (\Exception $e) {
+            throw new FileCannotBeCreatedException($e->getMessage());
+        }
+
+        try {
+            $entity->setType($this->typeQueryManager->proxy($dto->getTypeApiDto()));
         } catch (\Exception $e) {
             throw new FileCannotBeCreatedException($e->getMessage());
         }

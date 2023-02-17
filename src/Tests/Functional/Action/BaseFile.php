@@ -60,6 +60,7 @@ class BaseFile extends AbstractServiceTest implements BaseFileTestInterface
             FileApiDtoInterface::ACTIVE => Active::value(),
             FileApiDtoInterface::ATTACHMENT => Attachment::default(),
             MaterialApiDtoInterface::MATERIAL => BaseMaterial::defaultData(),
+            FileApiDtoInterface::TYPE => BaseType::defaultData(),
         ];
     }
 

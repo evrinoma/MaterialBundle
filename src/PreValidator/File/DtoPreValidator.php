@@ -25,6 +25,7 @@ class DtoPreValidator extends AbstractPreValidator implements DtoPreValidatorInt
         $this
             ->checkMaterial($dto)
             ->checkAttachment($dto)
+            ->checkType($dto)
             ->checkDescription($dto)
             ->checkPosition($dto)
         ;
@@ -36,6 +37,7 @@ class DtoPreValidator extends AbstractPreValidator implements DtoPreValidatorInt
             ->checkMaterial($dto)
             ->checkAttachment($dto)
             ->checkId($dto)
+            ->checkType($dto)
             ->checkDescription($dto)
             ->checkPosition($dto)
             ->checkActive($dto);
@@ -45,6 +47,16 @@ class DtoPreValidator extends AbstractPreValidator implements DtoPreValidatorInt
     {
         $this
             ->checkId($dto);
+    }
+
+    private function checkType(DtoInterface $dto): self
+    {
+        /** @var FileApiDtoInterface $dto */
+        if (!$dto->hasTypeApiDto()) {
+            throw new FileInvalidException('The Dto has\'t type');
+        }
+
+        return $this;
     }
 
     private function checkMaterial(DtoInterface $dto): self

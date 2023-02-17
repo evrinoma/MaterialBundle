@@ -80,5 +80,6 @@ trait BaseFileTestTrait
         Assert::assertArrayHasKey(FileApiDtoInterface::ACTIVE, $entity);
         Assert::assertArrayHasKey(FileApiDtoInterface::ATTACHMENT, $entity);
         Assert::assertArrayHasKey(FileApiDtoInterface::POSITION, $entity);
+        Assert::assertArrayHasKey(FileApiDtoInterface::TYPE, $entity);
     }
 }

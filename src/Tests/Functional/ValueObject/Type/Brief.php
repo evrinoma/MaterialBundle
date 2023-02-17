@@ -17,6 +17,6 @@ use Evrinoma\TestUtilsBundle\ValueObject\Common\AbstractIdentity;
 
 class Brief extends AbstractIdentity
 {
-    protected static string $value = 'ite';
-    protected static string $default = 'kzkt3';
+    protected static string $value = 'brochure';
+    protected static string $default = 'issuer3';
 }

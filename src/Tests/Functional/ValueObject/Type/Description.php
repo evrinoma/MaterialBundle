@@ -17,6 +17,6 @@ use Evrinoma\TestUtilsBundle\ValueObject\Common\AbstractIdentity;
 
 class Description extends AbstractIdentity
 {
-    protected static string $value = 'description ite';
-    protected static string $default = 'description nvr';
+    protected static string $value = 'description brochure';
+    protected static string $default = 'description artifact';
 }

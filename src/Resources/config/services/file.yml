@@ -75,6 +75,7 @@ services:
     arguments:
       - '@evrinoma.material.material.system.file_system'
       - '@evrinoma.material.material.query.manager'
+      - '@evrinoma.material.type.query.manager'
 
   Evrinoma\MaterialBundle\Mediator\File\CommandMediator:
     alias: evrinoma.material.file.command.mediator

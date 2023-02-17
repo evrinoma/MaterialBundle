@@ -23,45 +23,45 @@ use Evrinoma\TestUtilsBundle\Fixtures\AbstractFixture;
 class TypeFixtures extends AbstractFixture implements FixtureGroupInterface, OrderedFixtureInterface
 {
     protected static array $data = [
-        [
-            TypeApiDtoInterface::BRIEF => 'ite',
-            TypeApiDtoInterface::DESCRIPTION => 'description ite',
+        0=>[
+            TypeApiDtoInterface::BRIEF => 'brochure',
+            TypeApiDtoInterface::DESCRIPTION => 'description brochure',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2008-10-23 10:21:50',
         ],
-        [
-            TypeApiDtoInterface::BRIEF => 'kzkt',
-            TypeApiDtoInterface::DESCRIPTION => 'description kzkt',
+        1=>[
+            TypeApiDtoInterface::BRIEF => 'presentation',
+            TypeApiDtoInterface::DESCRIPTION => 'description presentation',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2015-10-23 10:21:50',
         ],
-        [
-            TypeApiDtoInterface::BRIEF => 'c2m',
-            TypeApiDtoInterface::DESCRIPTION => 'description c2m',
+        2=>[
+            TypeApiDtoInterface::BRIEF => 'document',
+            TypeApiDtoInterface::DESCRIPTION => 'description document',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2020-10-23 10:21:50',
         ],
-        [
-            TypeApiDtoInterface::BRIEF => 'kzkt2',
-            TypeApiDtoInterface::DESCRIPTION => 'description kzkt2',
+        3=>[
+            TypeApiDtoInterface::BRIEF => 'certificate',
+            TypeApiDtoInterface::DESCRIPTION => 'description certificate',
             TypeApiDtoInterface::ACTIVE => 'd',
             'created_at' => '2015-10-23 10:21:50',
             ],
-        [
-            TypeApiDtoInterface::BRIEF => 'nvr',
-            TypeApiDtoInterface::DESCRIPTION => 'description nvr',
+        4=>[
+            TypeApiDtoInterface::BRIEF => 'issuer',
+            TypeApiDtoInterface::DESCRIPTION => 'description issuer',
             TypeApiDtoInterface::ACTIVE => 'b',
             'created_at' => '2010-10-23 10:21:50',
         ],
-        [
-            TypeApiDtoInterface::BRIEF => 'nvr2',
-            TypeApiDtoInterface::DESCRIPTION => 'description nvr2',
+        5=>[
+            TypeApiDtoInterface::BRIEF => 'gost',
+            TypeApiDtoInterface::DESCRIPTION => 'description asrtifactgost',
             TypeApiDtoInterface::ACTIVE => 'd',
             'created_at' => '2010-10-23 10:21:50',
             ],
-        [
-            TypeApiDtoInterface::BRIEF => 'nvr3',
-            TypeApiDtoInterface::DESCRIPTION => 'description nvr3',
+        6=>[
+            TypeApiDtoInterface::BRIEF => 'artifact',
+            TypeApiDtoInterface::DESCRIPTION => 'description artifact',
             TypeApiDtoInterface::ACTIVE => 'd',
             'created_at' => '2011-10-23 10:21:50',
         ],
@@ -102,7 +102,7 @@ class TypeFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
     public static function getGroups(): array
     {
         return [
-            FixtureInterface::TYPE_FIXTURES, FixtureInterface::MATERIAL_FIXTURES,
+            FixtureInterface::TYPE_FIXTURES
         ];
     }
 
