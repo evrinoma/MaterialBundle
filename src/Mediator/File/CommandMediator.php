@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Mediator\File;
 
-use Evrinoma\MaterialBundle\Manager\Type\QueryManagerInterface as TypeQueryManagerInterface;
 use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\MaterialBundle\Dto\FileApiDtoInterface;
 use Evrinoma\MaterialBundle\Exception\File\FileCannotBeCreatedException;
 use Evrinoma\MaterialBundle\Exception\File\FileCannotBeSavedException;
 use Evrinoma\MaterialBundle\Manager\Material\QueryManagerInterface as MaterialQueryManagerInterface;
+use Evrinoma\MaterialBundle\Manager\Type\QueryManagerInterface as TypeQueryManagerInterface;
 use Evrinoma\MaterialBundle\Model\File\FileInterface;
 use Evrinoma\MaterialBundle\System\FileSystemInterface;
 use Evrinoma\UtilsBundle\Mediator\AbstractCommandMediator;

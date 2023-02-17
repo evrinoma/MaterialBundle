@@ -33,8 +33,8 @@ class FileApiDto extends AbstractDto implements FileApiDtoInterface
     use DescriptionTrait;
     use IdTrait;
     use MaterialApiDtoTrait;
-    use TypeApiDtoTrait;
     use PositionTrait;
+    use TypeApiDtoTrait;
 
     /**
      * @Dto(class="Evrinoma\MaterialBundle\Dto\MaterialApiDto", generator="genRequestMaterialApiDto")

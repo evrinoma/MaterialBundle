@@ -24,7 +24,7 @@ use Evrinoma\TestUtilsBundle\Fixtures\AbstractFixture;
 class FileFixtures extends AbstractFixture implements FixtureGroupInterface, OrderedFixtureInterface
 {
     protected static array $data = [
-        0=> [
+        0 => [
             FileApiDtoInterface::DESCRIPTION => 'description ite',
             FileApiDtoInterface::ACTIVE => 'a',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -32,7 +32,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 0,
             FileApiDtoInterface::TYPE => 0,
         ],
-        1=>[
+        1 => [
             FileApiDtoInterface::DESCRIPTION => 'description kzkt',
             FileApiDtoInterface::ACTIVE => 'a',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -40,7 +40,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 1,
             FileApiDtoInterface::TYPE => 1,
         ],
-        2=> [
+        2 => [
             FileApiDtoInterface::DESCRIPTION => 'description c2m',
             FileApiDtoInterface::ACTIVE => 'a',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -48,7 +48,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 0,
             FileApiDtoInterface::TYPE => 2,
         ],
-        3=>[
+        3 => [
             FileApiDtoInterface::DESCRIPTION => 'description kzkt2',
             FileApiDtoInterface::ACTIVE => 'd',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -56,7 +56,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 1,
             FileApiDtoInterface::TYPE => 3,
             ],
-        4=>[
+        4 => [
             FileApiDtoInterface::DESCRIPTION => 'description nvr',
             FileApiDtoInterface::ACTIVE => 'b',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -64,7 +64,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 0,
             FileApiDtoInterface::TYPE => 4,
         ],
-        5=> [
+        5 => [
             FileApiDtoInterface::DESCRIPTION => 'description nvr2',
             FileApiDtoInterface::ACTIVE => 'd',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',
@@ -72,7 +72,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
             MaterialApiDtoInterface::MATERIAL => 1,
             FileApiDtoInterface::TYPE => 5,
             ],
-        6=> [
+        6 => [
             FileApiDtoInterface::DESCRIPTION => 'description nvr3',
             FileApiDtoInterface::ACTIVE => 'd',
             FileApiDtoInterface::ATTACHMENT => 'PATH://TO_ATTACHMENT',

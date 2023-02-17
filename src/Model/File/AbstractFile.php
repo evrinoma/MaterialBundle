@@ -41,7 +41,6 @@ abstract class AbstractFile implements FileInterface
      */
     protected ?MaterialInterface $material = null;
 
-
     /**
      * @ORM\ManyToOne(targetEntity="Evrinoma\MaterialBundle\Model\Type\TypeInterface")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)

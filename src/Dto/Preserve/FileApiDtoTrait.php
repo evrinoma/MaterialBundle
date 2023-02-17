@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Dto\Preserve;
 
-use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Preserve\TypeApiDtoTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\ActiveTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\AttachmentTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\DescriptionTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\IdTrait;
 use Evrinoma\DtoCommon\ValueObject\Preserve\PositionTrait;
 use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Preserve\MaterialApiDtoTrait;
+use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Preserve\TypeApiDtoTrait;
 
 trait FileApiDtoTrait
 {

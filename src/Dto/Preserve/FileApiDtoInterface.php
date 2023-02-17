@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace Evrinoma\MaterialBundle\Dto\Preserve;
 
-use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable\TypeApiDtoInterface;
 use Evrinoma\DtoCommon\ValueObject\Mutable\ActiveInterface;
 use Evrinoma\DtoCommon\ValueObject\Mutable\AttachmentInterface;
 use Evrinoma\DtoCommon\ValueObject\Mutable\DescriptionInterface;
 use Evrinoma\DtoCommon\ValueObject\Mutable\IdInterface;
 use Evrinoma\DtoCommon\ValueObject\Mutable\PositionInterface;
 use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable\MaterialApiDtoInterface;
+use Evrinoma\MaterialBundle\DtoCommon\ValueObject\Mutable\TypeApiDtoInterface;
 
 interface FileApiDtoInterface extends IdInterface, DescriptionInterface, ActiveInterface, AttachmentInterface, PositionInterface, MaterialApiDtoInterface, TypeApiDtoInterface
 {

@@ -23,7 +23,7 @@ use Evrinoma\TestUtilsBundle\Fixtures\AbstractFixture;
 class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface, OrderedFixtureInterface
 {
     protected static array $data = [
-        0=>[
+        0 => [
             MaterialApiDtoInterface::TITLE => 'ite',
             MaterialApiDtoInterface::POSITION => 1,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -32,7 +32,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        1=>[
+        1 => [
             MaterialApiDtoInterface::TITLE => 'kzkt',
             MaterialApiDtoInterface::POSITION => 2,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -41,7 +41,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        2=>[
+        2 => [
             MaterialApiDtoInterface::TITLE => 'c2m',
             MaterialApiDtoInterface::POSITION => 3,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -50,7 +50,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        3=>[
+        3 => [
             MaterialApiDtoInterface::TITLE => 'kzkt2',
             MaterialApiDtoInterface::POSITION => 1,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -59,7 +59,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        4=>[
+        4 => [
             MaterialApiDtoInterface::TITLE => 'nvr',
             MaterialApiDtoInterface::POSITION => 2,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -68,7 +68,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        5=>[
+        5 => [
             MaterialApiDtoInterface::TITLE => 'nvr2',
             MaterialApiDtoInterface::POSITION => 3,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -77,7 +77,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
             MaterialApiDtoInterface::IMAGE => 'PATH://TO_IMAGE',
             MaterialApiDtoInterface::PREVIEW => 'PATH://TO_IMAGE_PREV',
         ],
-        6=>[
+        6 => [
             MaterialApiDtoInterface::TITLE => 'nvr3',
             MaterialApiDtoInterface::POSITION => 1,
             MaterialApiDtoInterface::DESCRIPTION => 'desc',
@@ -128,7 +128,7 @@ class MaterialFixtures extends AbstractFixture implements FixtureGroupInterface,
     public static function getGroups(): array
     {
         return [
-            FixtureInterface::MATERIAL_FIXTURES
+            FixtureInterface::MATERIAL_FIXTURES,
         ];
     }
 

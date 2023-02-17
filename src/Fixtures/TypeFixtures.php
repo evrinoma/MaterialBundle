@@ -23,43 +23,43 @@ use Evrinoma\TestUtilsBundle\Fixtures\AbstractFixture;
 class TypeFixtures extends AbstractFixture implements FixtureGroupInterface, OrderedFixtureInterface
 {
     protected static array $data = [
-        0=>[
+        0 => [
             TypeApiDtoInterface::BRIEF => 'brochure',
             TypeApiDtoInterface::DESCRIPTION => 'description brochure',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2008-10-23 10:21:50',
         ],
-        1=>[
+        1 => [
             TypeApiDtoInterface::BRIEF => 'presentation',
             TypeApiDtoInterface::DESCRIPTION => 'description presentation',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2015-10-23 10:21:50',
         ],
-        2=>[
+        2 => [
             TypeApiDtoInterface::BRIEF => 'document',
             TypeApiDtoInterface::DESCRIPTION => 'description document',
             TypeApiDtoInterface::ACTIVE => 'a',
             'created_at' => '2020-10-23 10:21:50',
         ],
-        3=>[
+        3 => [
             TypeApiDtoInterface::BRIEF => 'certificate',
             TypeApiDtoInterface::DESCRIPTION => 'description certificate',
             TypeApiDtoInterface::ACTIVE => 'd',
             'created_at' => '2015-10-23 10:21:50',
             ],
-        4=>[
+        4 => [
             TypeApiDtoInterface::BRIEF => 'issuer',
             TypeApiDtoInterface::DESCRIPTION => 'description issuer',
             TypeApiDtoInterface::ACTIVE => 'b',
             'created_at' => '2010-10-23 10:21:50',
         ],
-        5=>[
+        5 => [
             TypeApiDtoInterface::BRIEF => 'gost',
             TypeApiDtoInterface::DESCRIPTION => 'description asrtifactgost',
             TypeApiDtoInterface::ACTIVE => 'd',
             'created_at' => '2010-10-23 10:21:50',
             ],
-        6=>[
+        6 => [
             TypeApiDtoInterface::BRIEF => 'artifact',
             TypeApiDtoInterface::DESCRIPTION => 'description artifact',
             TypeApiDtoInterface::ACTIVE => 'd',
@@ -102,7 +102,7 @@ class TypeFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
     public static function getGroups(): array
     {
         return [
-            FixtureInterface::TYPE_FIXTURES
+            FixtureInterface::TYPE_FIXTURES,
         ];
     }
 
