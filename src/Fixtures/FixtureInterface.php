@@ -16,6 +16,6 @@ namespace Evrinoma\MaterialBundle\Fixtures;
 interface FixtureInterface
 {
     public const MATERIAL_FIXTURES = 'MATERIAL_FIXTURES';
-    public const FILE_FIXTURES = 'FILE_FIXTURES';
-    public const TYPE_FIXTURES = 'TYPE_FIXTURES';
+    public const MATERIAL_FILE_FIXTURES = 'MATERIAL_FILE_FIXTURES';
+    public const MATERIAL_TYPE_FIXTURES = 'MATERIAL_TYPE_FIXTURES';
 }

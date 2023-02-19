@@ -34,8 +34,8 @@ final class FileApiControllerTest extends AbstractFunctionalTest
     {
         return [
             FixtureInterface::MATERIAL_FIXTURES,
-            FixtureInterface::FILE_FIXTURES,
-            FixtureInterface::TYPE_FIXTURES,
+            FixtureInterface::MATERIAL_FILE_FIXTURES,
+            FixtureInterface::MATERIAL_TYPE_FIXTURES,
         ];
     }
 }

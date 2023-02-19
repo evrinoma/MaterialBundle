@@ -102,7 +102,7 @@ class TypeFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
     public static function getGroups(): array
     {
         return [
-            FixtureInterface::TYPE_FIXTURES,
+            FixtureInterface::MATERIAL_TYPE_FIXTURES,
         ];
     }
 

@@ -123,7 +123,7 @@ class FileFixtures extends AbstractFixture implements FixtureGroupInterface, Ord
     public static function getGroups(): array
     {
         return [
-            FixtureInterface::FILE_FIXTURES,
+            FixtureInterface::MATERIAL_FILE_FIXTURES,
         ];
     }
 
