@@ -101,6 +101,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->post($fileApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -153,6 +154,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->put($fileApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -202,6 +204,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->delete($fileApiDto, '', $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -277,6 +280,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->criteria($fileApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -325,6 +329,7 @@ final class FileApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->get($fileApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 

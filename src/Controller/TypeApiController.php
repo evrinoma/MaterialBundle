@@ -93,6 +93,7 @@ final class TypeApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->post($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -141,6 +142,7 @@ final class TypeApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->put($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -190,6 +192,7 @@ final class TypeApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->delete($materialApiDto, '', $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -260,6 +263,7 @@ final class TypeApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->criteria($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -308,6 +312,7 @@ final class TypeApiController extends AbstractWrappedApiController implements Ap
         try {
             $this->facade->get($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 

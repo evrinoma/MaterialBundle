@@ -100,6 +100,7 @@ final class MaterialApiController extends AbstractWrappedApiController implement
         try {
             $this->facade->post($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -151,6 +152,7 @@ final class MaterialApiController extends AbstractWrappedApiController implement
         try {
             $this->facade->put($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -200,6 +202,7 @@ final class MaterialApiController extends AbstractWrappedApiController implement
         try {
             $this->facade->delete($materialApiDto, '', $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -283,6 +286,7 @@ final class MaterialApiController extends AbstractWrappedApiController implement
         try {
             $this->facade->criteria($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
@@ -331,6 +335,7 @@ final class MaterialApiController extends AbstractWrappedApiController implement
         try {
             $this->facade->get($materialApiDto, $group, $json);
         } catch (\Exception $e) {
+            $json = [];
             $error = $this->setRestStatus($e);
         }
 
