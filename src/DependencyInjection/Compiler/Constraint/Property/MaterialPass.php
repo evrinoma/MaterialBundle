@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
 class MaterialPass extends AbstractConstraint implements CompilerPassInterface
 {
-    public const MATERIAL_CONSTRAINT = 'evrinoma.material.constraint.material.property';
+    public const MATERIAL_CONSTRAINT = 'evrinoma.material.constraint.property.material';
 
     protected static string $alias = self::MATERIAL_CONSTRAINT;
     protected static string $class = MaterialValidator::class;
