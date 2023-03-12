@@ -1,7 +1,4 @@
 services:
-  evrinoma.material.constraint.property.material.body:
-    class: Evrinoma\MaterialBundle\Constraint\Property\Material\Body
-
   evrinoma.material.constraint.property.material.title:
     class: Evrinoma\MaterialBundle\Constraint\Property\Material\Title
 

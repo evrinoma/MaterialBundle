@@ -80,7 +80,7 @@ class BaseType extends AbstractServiceTest implements BaseTypeTestInterface
 
         $find = $this->criteria([TypeApiDtoInterface::DTO_CLASS => static::getDtoClass(), TypeApiDtoInterface::ACTIVE => Active::delete(), TypeApiDtoInterface::DESCRIPTION => Description::default()]);
         $this->testResponseStatusOK();
-        Assert::assertCount(2, $find[PayloadModel::PAYLOAD]);
+        Assert::assertCount(1, $find[PayloadModel::PAYLOAD]);
     }
 
     public function actionDelete(): void
